@@ -27,6 +27,13 @@
         header h1 {
             margin: 0;
             font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            height: 50px;
+            margin-right: 15px;
         }
 
         .login-btn {
@@ -38,13 +45,13 @@
             font-weight: bold;
         }
 
-        /* Hero Section (Image Background) */
+        /* Hero Section */
         .hero {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 400px;
-            background-image: url('p.jpg');
+            background-image: url('https://media.assettype.com/TNIE%2Fimport%2F2018%2F12%2F5%2Foriginal%2FLinking.jpg?w=768&auto=format%2Ccompress&fit=max');
             background-size: cover;
             background-position: center;
             color: white;
@@ -109,6 +116,26 @@
             color: #333;
         }
 
+        /* About Us Section */
+        .about-section {
+            background-color: #eef2f7;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         /* Footer Styles */
         footer {
             background-color: #0074cc;
@@ -130,13 +157,23 @@
 
     <!-- Header -->
     <header>
-        <h1>NIRMAL BUSSENISS</h1>
+        <h1>
+            <img src="https://5.imimg.com/data5/SELLER/Default/2022/11/CY/AK/VN/63072326/uti-pan-maker-3--500x500.png" alt="Nirmal Bussiness Logo">
+            NIRMAL BUSSENISS
+        </h1>
         <a href="login.html" class="login-btn">Login</a>
     </header>
 
-    <!-- Hero Section with Background Image -->
+    <!-- Hero Section -->
     <div class="hero">
-        <h2>Reliable PAN Card & Coupon Services</h2>
+        <h2>
+            YOUR TRUSTED PAN CARD SERVICES <br>
+            AFFORDABLE <br>
+            SECURED <br>
+            RELIABLE <br>
+            QUICK <br>
+            PAN CARD SERVICES
+        </h2>
     </div>
 
     <!-- Business Details Section -->
@@ -160,7 +197,30 @@
                 <p>We provide coupons at ₹107.</p>
             </div>
 
+            <!-- 24x7 Service Card -->
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3595/3595451.png" alt="24x7 Service">
+                <h3>24x7 Service</h3>
+                <p>We are available round the clock for your convenience.</p>
+            </div>
+
         </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="about-section">
+        <h2>About Us</h2>
+        <p>
+            We make PAN cards at ₹120 and provide coupons for ₹107.
+            <br><br>
+            You can contact us via email at <strong>mahadevappayammi@gmail.com</strong> or call us at:
+            <br><strong>+91 9916909019</strong> / <strong>+91 9060090385</strong>.
+            <br><br>
+            Address:<br>
+            Haravi, Karnataka, Zilla: Vijayanagara,<br>
+            Taluq: Huvina Hadagali,<br>
+            Near Pragati Krishna Gramina Bank, Haravi.
+        </p>
     </div>
 
     <!-- Footer -->
@@ -171,3 +231,4 @@
 
 </body>
 </html>
+
