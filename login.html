@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-vector/geometric-gradient-futuristic-background_23-2149116406.jpg');
+            background-size: cover;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #007bff; /* Blue color */
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff; /* Blue button */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .link {
+            margin-top: 20px;
+        }
+
+        .link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: red; /* Red for error message */
+            margin-top: 10px;
+            display: none; /* Hidden by default */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="user-id" placeholder="User ID" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+        </form>
+        <p class="error-message" id="error-message">YOUR EMAIL ID IS NOT REGISTERED / EMAIL OR PASSWORD IS WRONG</p>
+        <div class="link">
+            <p>If you don't have an account, <a href="signup.html">Sign Up here</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const userId = document.getElementById('user-id').value;
+            const password = document.getElementById('password').value;
+
+            // Simulating the login process for demonstration
+            if (userId.startsWith('NIR') && password.length >= 8) {
+                // Check if the user ID is valid; for now, let's assume it's always valid
+                if (userId === "NIR123456" && password === "password") { // Placeholder for actual logic
+                    window.location.href = 'dashboard.html'; // Redirect to dashboard
+                } else {
+                    document.getElementById('error-message').style.display = 'block'; // Show error message
+                }
+            } else {
+                // If email is entered instead of user ID
+                if (userId.includes('@')) {
+                    window.location.href = 'payment.html'; // Redirect to payment
+                } else {
+                    document.getElementById('error-message').style.display = 'block'; // Show error message
+                }
+            }
+        });
+    </script>
+</body>
+</html>
